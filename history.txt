@@ -1,0 +1,33 @@
+docker image build -t my-caddy .
+
+docker container ls
+
+docker container ls -a
+
+docker image list
+
+docker container run --name my-caddy-server -p 8080:80 -d my-caddy
+
+docker container ls
+
+docker container stop my-caddy-server
+
+docker container ls -a
+
+docker container rm my-caddy-server
+
+docker container ls -a
+
+docker image build -t my-caddy .
+
+docker container run --name my-caddy-server -p 8080:80 -d my-caddy
+
+docker container stop my-caddy-server
+
+docker container rm my-caddy-server
+
+docker container run --name my-caddy-server -v ${PWD}/pages:/usr/src/pages -p 8080:80 -d my-caddy
+
+docker container stop my-caddy-server
+
+docker container rm my-caddy-server
